@@ -1,0 +1,232 @@
+html,body
+{
+    height:100%;
+    margin:0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.wrapper
+{
+    background-image: url("./images/bg.jpg");
+    height:60%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:flex;
+    flex-flow: column;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.text
+{
+    color:#0de4ff;
+    width:100%;
+}
+
+#heading
+{
+    font-size:200%;
+}
+
+#writable>#text
+{
+    border-right: 0.2rem solid #777; 
+}
+
+#writable > .blinking
+{
+    
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+.intro
+{
+    display: block;
+    font-size:300%;
+}
+
+.wrapper a
+{
+    text-decoration: none;
+    color:#ffffff;
+    border-radius:2px;
+    /* border:1px solid red; */
+    padding:10px;
+    transition: background-color 0.3s;
+    font-size:16px;
+    letter-spacing: 1px;
+}
+
+.list
+{
+    list-style-type: none;
+    display: flex;
+    align-self:center;
+    position: absolute;
+    bottom:0px;
+    padding-left:0px;
+}
+
+.listItem
+{
+    margin: 0px 2px;
+}
+
+.lowerBorder
+{
+    width:fit-content;
+    border-bottom: 2px dashed #00bbd4d3;
+}
+
+#aboutContent
+{
+    margin: 27px 0px;
+    font-size: 98%;
+    text-align:center;
+}
+
+.myBtn
+{
+    background-color:#00bbd4d3;
+    color:#ffffff;
+}
+
+.projectRow
+{
+    margin: 0 auto;
+}
+
+ul li a
+{
+    position: relative;
+}
+
+.visitLink
+{
+    color:#00bbd4d3;
+    position: relative;
+    text-decoration: none;
+    transition: 0.4s;
+    letter-spacing: 1px;
+}
+
+.visitLink:hover
+{
+    text-decoration: none;
+    color:#000000;
+}
+
+
+.animateBorder:before
+{
+    content:"";
+    position: absolute;
+    left:0;
+    top:0;
+    border-bottom:1px solid;
+    width:0%;
+    height:100%;
+    transition: 0.6s;
+    opacity:0;
+}
+
+.animateBorder:hover:before
+{
+    width:100%;
+    opacity:1;
+    cursor:pointer;
+}
+
+.card
+{
+    margin: 0 auto;
+}
+
+/* common break points */
+
+@media screen and (max-width:540px)
+{
+    #writable
+    {
+        display:block;
+        font-size: 100%;
+    }
+    .intro
+    {
+        display: block;
+        font-size:200%;
+    }
+    #quotes
+    {
+        position: absolute;
+        top: -3%;
+        left: 65%;
+    }
+}
+
+@media screen and (min-width:540px)
+{
+    #quotes
+    {
+        position: absolute;
+        top: -3%;
+        left: 65%;
+        
+    }
+}
+
+@media screen and (min-width:768px)
+{
+    #aboutContent
+    {
+        text-align:start;
+    }
+}
+
+@media screen and (min-width:992px)
+{
+    #aboutContent
+    {
+        margin-top: 60px;
+        font-size: 137%;
+        
+    }
+
+    #quotes
+    {
+        position: absolute;
+        top:22%;
+        left:3%;
+    }
+}
+
+@media screen and (min-width:1200px)
+{
+    #heading
+    {
+    font-size:250%;
+    }
+
+    #quotes
+    {
+        position: absolute;
+        top:19%;
+        left:3%;
+    }
+}
+
+/* other break points */
+
+
+@keyframes blink{
+    0%{border-right: 0.2rem solid rgba(119, 119, 119, 0)}
+    /* 50%{border-right: 0.2rem solid rgba(119, 119, 119, 0.616);} */
+    100%{border-right: 0.2rem solid #777;}
+}
